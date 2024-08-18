@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,7 +18,7 @@ class _Sec_OnboardState extends State<Sec_Onboard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           SizedBox(
@@ -26,20 +28,20 @@ class _Sec_OnboardState extends State<Sec_Onboard> {
               'assets/animation/mixing.json',
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           Container(
             width: 330,
             child: Text.rich(
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontFamily: 'PaytoneOne',
                     fontSize: 35),
-                strutStyle: StrutStyle(),
+                strutStyle: const StrutStyle(),
                 TextSpan(children: [
-                  TextSpan(text: "Combine it\n"),
-                  TextSpan(
+                  const TextSpan(text: "Combine it\n"),
+                  const TextSpan(
                       text: "Enjoy\n",
                       style:
                           TextStyle(color: Color.fromRGBO(141, 227, 127, 1))),

@@ -1,6 +1,8 @@
+// ignore_for_file: camel_case_types, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
+import 'package:ingredient_cooker/features/presentation/pages/Auth_Pages/sign_up.dart';
 import 'package:ingredient_cooker/features/presentation/pages/onboarding%20pages/first_screen.dart';
-import 'package:quickalert/quickalert.dart';
 import 'package:ingredient_cooker/features/presentation/pages/onboarding%20pages/second_screen.dart';
 import 'package:ingredient_cooker/features/presentation/pages/onboarding%20pages/third_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -14,7 +16,7 @@ class Onboarding_Screen extends StatefulWidget {
 
 class _Onboarding_ScreenState extends State<Onboarding_Screen> {
   // Controller for page
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   // to change button
   bool ChangeButton = false;
   // loading
@@ -24,18 +26,18 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
     return Scaffold(
         body: Stack(children: [
       PageView(
-        physics: PageScrollPhysics(),
+        physics: const PageScrollPhysics(),
         onPageChanged: (index) {
           setState(() {
             ChangeButton = (index == 2);
           });
         },
         controller: _controller,
-        children: [First_Onboard(), Sec_Onboard(), Third_Onboard()],
+        children: const [First_Onboard(), Sec_Onboard(), Third_Onboard()],
       ),
       // Dots indicator here
       Container(
-          alignment: Alignment(0, 0.70),
+          alignment: const Alignment(0, 0.70),
           child: SmoothPageIndicator(
             controller: _controller,
             count: 3,
@@ -49,7 +51,7 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
         bottom: 40.0,
         left: 30.0,
         right: 30.0,
-        child: Container(
+        child: SizedBox(
           height: 50,
           child: ChangeButton
               ? ElevatedButton(
@@ -60,17 +62,18 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
                   onPressed: () {
                     setState(() {
                       loading = true;
-                      QuickAlert.show(
-                          context: context,
-                          type: QuickAlertType.error,
-                          text: "This Feature isn't added yet!");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Sign_up(),
+                          ));
                     });
                   },
                   child: loading
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           color: Colors.white,
                         )
-                      : Text(
+                      : const Text(
                           "Continue",
                           style: TextStyle(
                               color: Colors.white,
@@ -84,10 +87,10 @@ class _Onboarding_ScreenState extends State<Onboarding_Screen> {
                           borderRadius: BorderRadius.circular(12))),
                   onPressed: () {
                     _controller.nextPage(
-                        duration: Duration(milliseconds: 800),
+                        duration: const Duration(milliseconds: 800),
                         curve: Curves.easeIn);
                   },
-                  child: Text(
+                  child: const Text(
                     "Next",
                     style: TextStyle(
                         color: Colors.white,

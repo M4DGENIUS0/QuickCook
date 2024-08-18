@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,7 +18,7 @@ class _First_OnboardState extends State<First_Onboard> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             SizedBox(
@@ -26,21 +28,21 @@ class _First_OnboardState extends State<First_Onboard> {
                 'assets/animation/thinking.json',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 90,
             ),
             SizedBox(
               width: 330,
               child: Text.rich(
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.black,
                       fontFamily: 'PaytoneOne',
                       fontSize: 35),
-                  strutStyle: StrutStyle(),
+                  strutStyle: const StrutStyle(),
                   TextSpan(children: [
-                    TextSpan(text: "Find "),
-                    TextSpan(text: "Every\n"),
-                    TextSpan(
+                    const TextSpan(text: "Find "),
+                    const TextSpan(text: "Every\n"),
+                    const TextSpan(
                         text: "Ingredients\n",
                         style:
                             TextStyle(color: Color.fromRGBO(252, 0, 139, 1))),

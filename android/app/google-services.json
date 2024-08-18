@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "619287801405",
+    "project_id": "ingredients-app-429412",
+    "storage_bucket": "ingredients-app-429412.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619287801405:android:3a3c303c188f1af0914454",
+        "android_client_info": {
+          "package_name": "com.letscook.ingredient_cooker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX7hjKR_FPZF-yT31f1tIxGUeGROrpJP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
