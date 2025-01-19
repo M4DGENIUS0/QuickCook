@@ -17,7 +17,7 @@ class Prompt_Service {
     final homeprov = Provider.of<HomeProvider>(context, listen: false);
     final responses = Provider.of<UploadDataServer>(context, listen: false);
 
-    final apiKey = 'You-API-Here!';
+    const apiKey = 'You-API-Here';
     final model = GenerativeModel(
       model: 'gemini-1.5-flash-latest',
       apiKey: apiKey,
@@ -35,7 +35,7 @@ Recommend a recipe based on the provided ingredients. The Recipe should only bel
     final response = await model.generateContent(content);
 
     try {
-      if (response != null && response.text != null) {
+      if (response.text != null) {
         Prompt_data = json.decode(response.text!);
         // Prompt_data = data.map((item) => Recipe.fromJson(item)).toList();
         print('Number of recipes fetched: ${Prompt_data.length}');
